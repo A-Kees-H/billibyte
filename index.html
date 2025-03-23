@@ -3,30 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Token Store</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>A New Byte System</title>
+    <style>
+        /* Simple Black and White Theme */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* Simple Header */
+        .header {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #333333;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .site-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            flex: 1;
+        }
+        
+        /* Typography */
+        h1 {
+            border-bottom: 2px solid #000000;
+            padding-bottom: 0.5rem;
+        }
+        
+        h2 {
+            border-bottom: 1px solid #000000;
+            padding-bottom: 0.3rem;
+        }
+        
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border: 1px solid #000000;
+        }
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid #000000;
+        }
+        
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        
+        /* List Styles */
+        ul {
+            list-style-type: disc;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        strong {
+            font-weight: bold;
+        }
+        
+        /* Footer Styles */
+        .footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+        }
+        
+        .footer p {
+            margin: 0;
+        }
+        
+        .footer .subtitle {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.8rem;
+            margin-top: 0.2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="buy.html">Buy Tokens</a>
-        <a href="account.html">Account</a>
-    </nav>
+    <!-- Simple Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="site-title">Kees Hartley</h1>
+            <nav class="nav">
+            </nav>
+        </div>
+    </header>
 
-    <div id="content">
-        <h1>Welcome to the AI Tool Store</h1>
-        <p>Use AI tools by purchasing tokens.</p>
-        <a href="buy.html" class="btn">Buy Tokens</a>
+    <div class="container">
+        <h1>A New Byte System</h1>
+        
+        <p>I'm fully aware this will never take off and I'm shouting into the wind, but wouldn't it be convenient to match up our decimal numbers to our file sizes?</p>
+        
+        <table>
+            <tr>
+                <th>New Term</th>
+                <th>Equivalent</th>
+                <th>Old Term</th>
+            </tr>
+            <tr>
+                <td>1 byte</td>
+                <td>1 byte</td>
+                <td>1 byte</td>
+            </tr>
+            <tr>
+                <td>1 kilobyte</td>
+                <td>1,000 bytes</td>
+                <td>1 kilobyte</td>
+            </tr>
+            <tr>
+                <td>1 milibyte</td>
+                <td>1,000,000 bytes</td>
+                <td>1 megabyte</td>
+            </tr>
+            <tr>
+                <td>1 billibyte</td>
+                <td>1,000,000,000 bytes</td>
+                <td>1 gigabyte</td>
+            </tr>
+            <tr>
+                <td>1 trilibyte</td>
+                <td>1,000,000,000,000 bytes</td>
+                <td>1 terabyte</td>
+            </tr>
+            <tr>
+                <td>1 quadrilibyte</td>
+                <td>1,000,000,000,000,000 bytes</td>
+                <td>1 petabyte</td>
+            </tr>
+            <tr>
+                <td>1 quintilibyte</td>
+                <td>1,000,000,000,000,000,000 bytes</td>
+                <td>1 exabyte</td>
+            </tr>
+        </table>
+        
+        <h2>Why Change?</h2>
+        <ul>
+            <li><strong>Consistency:</strong> This new system aligns with the metric system, using prefixes that consistently represent powers of 1000.</li>
+            <li><strong>Clarity:</strong> The new terms clearly indicate the magnitude of data, reducing confusion.</li>
+            <li><strong>Familiarity:</strong> The terminology better matches what people already understand from everyday numeric terms.</li>
+        </ul>
     </div>
 
-    <script>
-        const userId = localStorage.getItem('userId');
-        if (!userId) {
-            localStorage.setItem('userId', Math.floor(Math.random() * 10000));
-        }
-    </script>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Kees Hartley 2025</p>
+        <p class="subtitle">chimp</p>
+    </footer>
 </body>
 </html>
-
-
-
